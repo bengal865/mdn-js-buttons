@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Update Button with JS / MDN</title>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+    <link rel = "stylesheet" href = "">
+</head>
+<body>
+<!-- Comment here -->
+    <button>Start machine</button>
+    <p>The machine is stopped.</p>
+    <!-- Put script at bottom of page so web page can load first before script is executed -->
+    <script>
+        let btn = document.querySelector('button');
+        let txt = document.querySelector('p');
+
+        btn.addEventListener('click', updateBtn);
+
+        function updateBtn() {
+          if (btn.textContent === 'Start machine') {
+            btn.textContent = 'Stop machine';
+            txt.textContent = 'The machine has started!';
+          } else {
+            btn.textContent = 'Start machine';
+            txt.textContent = 'The machine has stopped.';
+          }
+        }
+    </script>
+</body>
+</html>
